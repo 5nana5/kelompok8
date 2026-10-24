@@ -1,36 +1,34 @@
-import 'screens/detail_screen.dart';
-
 import 'package:flutter/material.dart';
 
-import 'widgets/custom_card.dart';
+import 'screens/detail_screen.dart';
 import 'widgets/custom_button.dart';
+import 'widgets/custom_card.dart';
 
 void main() {
-  runApp(const  TechEventApp());
+  runApp(const TechEventApp());
 }
 
-class  TechEventApp extends StatelessWidget {
-  const  TechEventApp({super.key});
+class TechEventApp extends StatelessWidget {
+  const TechEventApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: ' TechEvent Indonesia',
-      home:  TechEventHomePage(),
+      title: 'TechEvent Indonesia',
+      home: TechEventHomePage(),
     );
   }
 }
 
-class  TechEventHomePage extends StatefulWidget {
-  const  TechEventHomePage({super.key});
+class TechEventHomePage extends StatefulWidget {
+  const TechEventHomePage({super.key});
 
   @override
-  State< TechEventHomePage> createState() => _TechEventHomePageState();
+  State<TechEventHomePage> createState() => _TechEventHomePageState();
 }
 
 class _TechEventHomePageState extends State<TechEventHomePage> {
-  // State untuk menyimpan jumlah presensi/aktivitas
   int _counter = 0;
 
   void _incrementCounter() {
@@ -43,11 +41,13 @@ class _TechEventHomePageState extends State<TechEventHomePage> {
     String namaEvent = 'Flutter Mobile Boot Camp';
     String hargaEvent = 'Rp 150.000';
 
-    // Navigator.push untuk berpindah halaman sambil mengirim data
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => DetailData(nama: namaEvent, harga: hargaEvent),
+        builder: (context) => DetailScreen(
+          nama: namaEvent,
+          harga: hargaEvent,
+        ),
       ),
     );
   }
@@ -55,7 +55,7 @@ class _TechEventHomePageState extends State<TechEventHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text(' TechEvent Indonesia')),
+      appBar: AppBar(title: const Text('TechEvent Indonesia')),
       body: Center(
         child: SingleChildScrollView(
           padding: const EdgeInsets.symmetric(vertical: 24),
@@ -65,7 +65,7 @@ class _TechEventHomePageState extends State<TechEventHomePage> {
               const Icon(Icons.event_available, size: 80),
               const SizedBox(height: 16),
               const Text(
-                ' TechEvent Indonesia',
+                'TechEvent Indonesia',
                 style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 8),
@@ -108,7 +108,9 @@ class _TechEventHomePageState extends State<TechEventHomePage> {
                 type: CustomButtonType.tertiary,
                 onPressed: () {
                   ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(content: Text('Sedang menghubungi penyelenggara...')),
+                    const SnackBar(
+                      content: Text('Sedang menghubungi penyelenggara...'),
+                    ),
                   );
                 },
               ),
