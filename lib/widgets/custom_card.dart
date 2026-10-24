@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class StudentInfoCard extends StatelessWidget {
-  const StudentInfoCard({super.key});
+class EventInfoCard extends StatelessWidget {
+  const EventInfoCard({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class StudentInfoCard extends StatelessWidget {
       child: Row(
         children: [
           // ====================================================
-          // PROFILE ICON
+          // 
           // ====================================================
 
           Container(
@@ -45,7 +45,7 @@ class StudentInfoCard extends StatelessWidget {
           const SizedBox(width: 16),
 
           // ====================================================
-          // DATA MAHASISWA
+          // 
           // ====================================================
           const Expanded(
             child: Column(

@@ -62,7 +62,7 @@ class _TechEventHomePageState extends State<TechEventHomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Icon(Icons.school, size: 80),
+              const Icon(Icons.event_available, size: 80),
               const SizedBox(height: 16),
               const Text(
                 ' TechEvent Indonesia',
@@ -81,7 +81,7 @@ class _TechEventHomePageState extends State<TechEventHomePage> {
               const SizedBox(height: 24),
               CustomButton(
                 label: 'Ikuti Event Baru',
-                icon: Icons.play_arrow,
+                icon: Icons.add_circle_outline,
                 type: CustomButtonType.primary,
                 onPressed: () {
                   _incrementCounter();
