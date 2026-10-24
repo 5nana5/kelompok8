@@ -7,14 +7,10 @@ class EventInfoCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-
       padding: const EdgeInsets.all(20),
-
       decoration: BoxDecoration(
         color: Colors.white,
-
         borderRadius: BorderRadius.circular(16),
-
         boxShadow: [
           BoxShadow(
             color: Colors.black.withValues(alpha: 0.08),
@@ -23,55 +19,79 @@ class EventInfoCard extends StatelessWidget {
           ),
         ],
       ),
-
-      child: Row(
+      child: Column(
         children: [
-          // ====================================================
-          // 
-          // ====================================================
-
-          Container(
-            width: 60,
-            height: 60,
-
-            decoration: BoxDecoration(
-              color: Colors.indigo.shade50,
-              shape: BoxShape.circle,
-            ),
-
-            child: Icon(Icons.person, size: 32, color: Colors.indigo.shade700),
+          Row(
+            children: [
+              Container(
+                width: 60,
+                height: 60,
+                decoration: BoxDecoration(
+                  color: Colors.indigo.shade50,
+                  shape: BoxShape.circle,
+                ),
+                child: Icon(Icons.person, size: 32, color: Colors.indigo.shade700),
+              ),
+              const SizedBox(width: 16),
+              const Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Nanda Rahayu Widiyanti',
+                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(height: 4),
+                    Text(
+                      '411232038',
+                      style: TextStyle(fontSize: 14, color: Colors.black54),
+                    ),
+                    SizedBox(height: 2),
+                    Text(
+                      'Teknik Informatika',
+                      style: TextStyle(fontSize: 14, color: Colors.black54),
+                    ),
+                  ],
+                ),
+              ),
+            ],
           ),
 
-          const SizedBox(width: 16),
-
-          // ====================================================
-          // 
-          // ====================================================
-          const Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-
-              children: [
-                Text(
-                  'Muhammad Sandy',
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          const Divider(height: 32, thickness: 1),
+          Row(
+            children: [
+              Container(
+                width: 60,
+                height: 60,
+                decoration: BoxDecoration(
+                  color: Colors.indigo.shade50,
+                  shape: BoxShape.circle,
                 ),
-
-                SizedBox(height: 4),
-
-                Text(
-                  '20260001',
-                  style: TextStyle(fontSize: 14, color: Colors.black54),
+                child: Icon(Icons.person, size: 32, color: Colors.indigo.shade700),
+              ),
+              const SizedBox(width: 16),
+              const Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Hafizh Nur Wahid',
+                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(height: 4),
+                    Text(
+                      '4112331078',
+                      style: TextStyle(fontSize: 14, color: Colors.black54),
+                    ),
+                    SizedBox(height: 2),
+                    Text(
+                      'Teknik Informatika',
+                      style: TextStyle(fontSize: 14, color: Colors.black54),
+                    ),
+                  ],
                 ),
-
-                SizedBox(height: 2),
-
-                Text(
-                  'Teknik Informatika',
-                  style: TextStyle(fontSize: 14, color: Colors.black54),
-                ),
-              ],
-            ),
+              ),
+            ],
           ),
         ],
       ),
